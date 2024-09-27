@@ -1,0 +1,362 @@
+
+<!-- saved from url=(0035)https://diffusion-vision.github.io/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- from MDCA -->
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="author" content="Nimol Thuon">
+    <meta name="description"
+        content="Multimodal Understanding: SYLLABLE ANALYSIS AUGMENTATION STRANGY IN PALM-LEAF PROJECT">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/png" href="">
+    <!-- Format -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+    <link rel="stylesheet" href="../format/app.css">
+    <link rel="stylesheet" href="../format/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+    <script src="../format/app.js"></script>
+
+    <title>Text-Line and Glyph/Word Enchements and Generation in Palm Leaf Manuscirpts</title>
+    <!-- <link rel="icon" href="iitd_logo.png" type="image/png"> -->
+    <link rel="icon" href="" type="image/png">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="./css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link rel="stylesheet" href="./css/css2">
+    <style>
+        .title {
+          color: black; /* Set default color */
+        }
+      
+        .gray-text {
+          color: #828282; /* Use your desired shade of grey */
+          /* Bold*/
+          font-weight: bold;
+        }
+        .gray-text2 {
+          color: #515151; /* Use your desired shade of grey */
+          /* Bold*/
+          font-weight: bold;
+        }
+        .author {
+            color: #088df3; /* Use your desired shade of grey */
+        }
+        .affiliations2 {
+            color: #7d7d7d; /* Use your desired shade of grey */
+            text-align: center;
+            font-size: smaller;
+        }
+        .affiliations {
+            font-size: larger;
+        }
+        .logo {
+            position: fixed;
+        }
+        .logo img {
+            position: fixed;
+            width: 90px; /* Adjust the width as needed */
+            height: auto; /* Maintain aspect ratio */
+            top: 10px; /* Adjust as needed */
+            right: 10px; /* Adjust as needed */
+            z-index: 999; /* Ensure the logo appears on top of other content */
+            
+        }
+        .center {
+            text-align: center;
+        }
+        .bigger-font {
+            font-size: 24px; /* Adjust the font size as needed */
+        }
+        .bold-text {
+            font-weight: bold;
+        }
+        .left-align {
+            text-align: left;
+        }
+        .font-size-author-names {
+            font-size: 21px;
+        }
+        .center-align {
+            text-align: center;
+        }
+        .section{
+            font-size: 150%;
+            font-weight: 500;
+            /* background: rgba(0,0,0,0.03); */
+            padding-top: 0.5em;
+            padding-bottom: 0.5em;
+            color: #565656;
+            text-align: center;
+            /* padding-left: 0.5em; */
+        }
+      </style>
+    </head>
+    
+<body data-new-gr-c-s-check-loaded="14.1162.0" data-gr-ext-installed="">
+    <div class="container">
+    <!-- <div class="BbxBP a3ETed K5Zlne" jsname="WA9qLc" jscontroller="RQOkef" jsaction="rcuQ6b:ywL4Jf;VbOlFf:ywL4Jf;FaOgy:ywL4Jf; keydown:Hq2uPe; wheel:Ut4Ahc;" data-top-navigation="true" data-is-preview="true"></div> -->
+<!--     <div class="logo">
+        <img src="" alt="Logo">
+    </div> -->
+    <p class="title"><span class="gray-text">Document Enhancement</span><br>Document Enhancement for Improving Post-processing Tasks in Palm Leaf Manuscripts</p>
+    <p class="gray-text2 center bigger-font">ICDAR-IJDAR 2024, ICFHR 2022, APSIPA ASC 2024</p>
+    <!-- <p class="title">Effective Conditioning of Diffusion Models for Monocular Depth Estimation</p> -->
+
+    <p class="author">
+        <span class="author font-size-author-names">
+            <a href="">
+            Nimol&nbsp;Thuon*</a>
+        </span>
+        <span class="author font-size-author-names">
+            <a href="">
+                Jun&nbsp;Du*</a>
+        </span>
+        <span class="author font-size-author-names">
+            <a href="">
+                Zhenrong&nbsp;Zhang</a>
+        </span>
+          <span class="author font-size-author-names">
+            <a href="">
+                Jiefeng&nbsp;Ma</a>
+        </span>
+    </p>
+    <div class="affiliations">
+        <!-- <a href="https://home.iitd.ac.in/"> -->
+            1. National Engineering Laboratory for Speech and 
+Language Information Processing (NEL-SLIP),
+
+University of Science and Technology of China, Hefei, Anhui, China
+
+
+        <!-- </a> -->
+    </div>
+        <div class="affiliations">
+        <!-- <a href="https://home.iitd.ac.in/"> -->
+           2. iFLYTEK Research, Hefei, Anhui, China
+
+
+        <!-- </a> -->
+    </div>
+            <div class="affiliations">
+        <!-- <a href="https://home.iitd.ac.in/"> -->
+           3. One to Many Cambodia, Cambodia
+
+
+        <!-- </a> -->
+    </div>
+    
+    <div class="row">
+        <div class="col-md-12 col-md-offset-1 text-center">
+            <ul class="nav nav-pills nav-justified">
+                <li>
+                    <a href="https://link.springer.com/article/10.1007/s10032-024-00472-z">
+                        <img src="assets/fig/21.jpg" height="80px"><br>
+                        <h5><strong>PALM-GAN</strong></h5>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://link.springer.com/chapter/10.1007/978-3-031-21648-0_5">
+                        <img src="assets/fig/21.jpg" height="80px"><br>
+                        <h5><strong>IEPalmV1</strong></h5>
+                    </a>
+                </li>
+                                <li>
+                    <a href="">
+                        <img src="assets/fig/21.jpg" height="80px"><br>
+                        <h5><strong>IEPalmV2 (Soon)</strong></h5>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <p class="section center">Project Descriptions</p>
+    <p>
+ 
+    This project aims to address the significant gap in the analysis and enhancement of text-line palm leaf manuscripts, which are vital historical artifacts. Despite their cultural importance, there has been limited exploration into effective methods for improving the quality of these complex ancient images.
+
+    Our research focuses on developing innovative techniques to enhance the legibility and visual quality of palm leaf manuscripts. We will investigate various image processing methods, including advanced algorithms for noise reduction, contrast enhancement, and detail restoration. Additionally, we aim to explore machine learning approaches for text recognition, utilizing both character-based and syllable-based models to improve accuracy.
+
+    By integrating these methodologies, our project seeks to establish a comprehensive framework for the preservation and recognition of palm leaf manuscripts, ultimately contributing to their accessibility for researchers and scholars. The findings will be critical for enhancing the study of ancient texts and promoting the cultural heritage of Southeast Asia.
+
+    </p>
+    <p class="section center-align">Our Goal!</p>
+
+    <div class="flex-container margin-top-1em margin-bottom-1em">
+        <figure>
+        <img src="./assets/1.JPG">
+        <figcaption class="left-align"><span class="bold-text">Challenges: </span>In this study, we have carefully selected Southeast Asian ancient palm leaf manuscript datasets, encompassing Balinese, Sundanese, and Khmer scripts from the ICFHR 2016 and ICFHR 2018 contests. Southeast Asian scripts pose notable complexity for two primary reasons. Firstly, palm leaf manuscripts often endure physical deterioration over time due to storage conditions. These manuscripts are subject to a range of damages from factors such as light exposure, activity, regular handling, and processing. The situation is worsened by the limitations of advanced image-capturing methods. Secondly, the fragility of aged leaves can introduce challenges during the digitization process. Manuscripts also inherently have a high level of complexity due to the extensive character classes, alphabets, and numerals they contain, rendering historical document images more challenging to binarize than scanned documents.
+
+</figcaption>
+        </figure>
+    </div>  
+    <div class="flex-container margin-top-1em margin-bottom-1em">
+        <figure>
+        <img src="./assets/2.JPG">
+        <figcaption class="left-align"><span class="bold-text">Challenges: </span>The associated challenges of these datasets revolve around their volume, the complexity of the manuscripts, and the quality of the images. As depicted in Fig. 3, we emphasize common problems with manuscripts, including variations in layout, color, contrast, and noise presence. These issues complicate the training process of deep learning-based approaches. Due to the diverse nature of the collection, each script type exhibits unique layout characteristics, such as shape and color, further complicating the process. This difficulty is heightened due to the scarcity of data for each layout type, as deep learning models
+        often demand substantial amounts of data for efficient and effective training. Text color across manuscripts varies significantly. Some scripts are written in black ink, while others are etched into the leaf, resulting in white text. This variation in text color adds another layer of complexity to the digitization process. The contrast is also challenging,
+        with documents varying greatly in brightness. Some manuscripts are well-lit and bright, while others are darker and less illuminated. This range of lighting conditions also make it difficult for algorithms to correctly identify and process the text. Additionally, some manuscripts feature drawings, signatures, and even Latin letters, further increasing their complexity. Finally, one of the most persistent challenges is the presence of noise. Aging often results in fading ink, physical damage, and additional noise that blends with the text. This makes separating the background from the text a significant challenge, especially when applying deep learning-based approaches directly to these complex datasets.
+
+</figcaption>
+        </figure>
+    </div> 
+
+
+
+
+    <p class="section" style="color: darkred;"><strong>Paper 1:Generate, Transform, and Clean: The Role of GANs and
+Transformers in Palm Leaf Manuscript Generation and
+Enhancement</strong></p>
+ Palm leaf manuscripts are valuable for document analysis, but challenges in cleaning and denoising arise from language diversity, unbalanced datasets, and inherent variations. To address these issues, we propose the Generate, Transform, and Clean (GTC) strategy, utilizing two generative adversarial networks (GANs) for data augmentation and enhancement. The “Generate” module employs an enhanced deep generative adversarial network (DCGAN) to create realistic backgrounds. The “Transform” module uses a multi-task algorithm for text and background transformation, incorporating palm leaf characteristics. Finally, the “Clean” module implements a customized transformer-based GAN (PALM-GAN) for effective binarization. We evaluate our approach on mixed datasets from the ICFHR 2016 and 2018 contests, including Balinese, Sundanese, and Khmer manuscripts. Our results demonstrate the superiority of the GTC method over existing techniques and its potential to enhance the digitization of historical palm leaf documents.
+
+
+
+        <p class="section center-align">The diagram of overview of architecture</p>
+    <div class="flex-container margin-top-1em margin-bottom-1em">
+        <figure class="center-align">
+            <div id="video-container">
+
+            <img src="./assets/3.JPG">
+            </div>
+            <figcaption class="left-align">
+                <span class="bold-text">Details: </span>
+                Overview of our framework includes: (a) Generate: Aims to extract and create more diverse backgrounds. (b)
+Transform: Focuses on combining and reconstructing the generated background with cleaned text. (c) Clean: Utilizes PALMGAN
+to clean and enhance the quality of text in the manuscripts.
+            </figcaption>
+        </figure>
+    </div>
+   
+
+        <p class="section center-align">Generated Dataset Process.</p>
+    <div class="flex-container margin-top-1em margin-bottom-1em">
+        <figure class="center-align">
+            <div id="video-container">
+
+            <img src="./assets/5.JPG">
+            <img src="./assets/6.JPG">
+            </div>
+            <figcaption class="left-align">
+                <span class="bold-text">Details: </span>
+              Sample results of generated and transforms with different levels.
+
+            </figcaption>
+        </figure>
+    </div>
+        <p class="section center-align">Results</p>
+    <div class="flex-container margin-top-1em margin-bottom-1em">
+        <figure class="center-align">
+            <div id="video-container">
+
+            <img src="./assets/4.JPG">
+            </div>
+            <figcaption class="left-align">
+                <span class="bold-text">Details: </span>
+               Benchmark state-of-the-art (SOTA) approaches and compare our proposed method across different datasets.
+
+            </figcaption>
+        </figure>
+    </div>
+        <p class="section center-align">Results Analysis</p>
+    <div class="flex-container margin-top-1em margin-bottom-1em">
+        <figure class="center-align">
+            <div id="video-container">
+
+            <img src="./assets/7.JPG">
+            </div>
+            <figcaption class="left-align">
+                <span class="bold-text">Details: </span>
+               The example of prediction with attention visualizations. The outputs
+were correctly predicted by using (a) DenseNet-GRU with SADA techniques
+and (b) DenseNet-GRU without any pre-processing techniques.
+            </figcaption>
+        </figure>
+
+    </div>
+
+        <p class="section" style="color: darkred;"><strong c>Paper 2: Character Enhanment for improving classification task (IEPalmV1)</strong></p>
+  This paper outlines techniques to enhance the performance of poor-quality palm leaf manuscripts, presenting a multi-task image processing approach called IEPalm. We begin by focusing on contrast balance, followed by thresholding binarization to remove background noise and better separate the text for improved understanding. <h3>
+        <p class="section center-align">Overall frameworks!</p>
+
+    <div class="flex-container margin-top-1em margin-bottom-1em">
+        <figure>
+        <img src="./assets/8.JPG">
+        <figcaption class="left-align">
+
+</figcaption>
+        </figure>
+    </div>  
+
+<h4>Normalization</h4>
+<p>
+    In the preprocessing step, we primarily focus on balancing the contrast of an image. Due to low contrast, image enhancement is necessary to emphasize certain features and reduce ambiguity, thus improving thresholding. Inspired by an updated version of contrast limited adaptive histogram equalization (CLAHE), this method is selected for contrast enhancement to correct inconsistencies between text and background. Applying CLAHE can also reduce noise levels while maintaining high spatial frequency content through median filtering and edge sharpening. Additionally, adaptive histogram clipping (AHC) can be applied to moderate over-enhancements by automatically adjusting clipping levels.
+</p>
+
+<p>
+    The CLAHE technique can be described by the following formula:
+</p>
+<pre>
+C = Pro(f) * [Cmax - Cmin] + Cmin  (1)
+</pre>
+<p>
+    In an exponential distribution, the gray level can be described as:
+</p>
+<pre>
+C = Cmin - In[1 - Pro(f)] * (1 / δ)  (2)
+</pre>
+<p>
+    where <strong>Cmax</strong> is the maximum pixel value, <strong>Cmin</strong> is the minimum pixel value, <strong>C</strong> represents computed pixel values, <strong>Pro(f)</strong> is the cumulative probability distribution, and <strong>δ</strong> is the clip parameter.
+</p>
+
+<h4>Thresholding</h4>
+<p>
+    WAN was proposed to improve the Sauvola method for better reliability on low-quality images. However, Sauvola’s approach struggles to segment text and background effectively. For instance, if the contrast between the foreground and background is low, noise may appear in the text image. Thus, we present an approach to calculate binarization thresholding, which is more likely to succeed for these degraded documents. The main benefit of WAN is that it enhances binarization by shifting the threshold for detailed images. Our investigation shows that the mean value <strong>m</strong> significantly impacts threshold values. When non-text pixels and text pixels have gray values close to each other, this can enhance the output image. However, increasing the threshold value can leave noise and artifacts in the image, making it necessary to calculate a maximum threshold value as a replacement for the actual mean. The maximum-mean equation is represented as follows:
+</p>
+<pre>
+imax = mean + max(a, b) / 2  (3)
+</pre>
+<p>
+    where <strong>max(a, b)</strong> exemplifies the maximum contrast of the source image, while <strong>mean</strong> represents the average contrast of the entire image. This allows us to calculate the average of the highest contrast, helping to recondition lost features and reduce noise and artifacts in the binarization results. The following algorithm is presented for WAN:
+</p>
+<pre>
+T = (imax) * (1 - k) / (1 - σ) * R  (4)
+</pre>
+<p>
+    where <strong>k</strong> and <strong>R</strong> use default values from the Sauvola method. Here, <strong>k</strong> represents the gray level, <strong>m</strong> is the mean, <strong>σ</strong> is the standard deviation, and <strong>R</strong> stands for color (default value).
+</p>
+        <p class="section" style="color: darkred;"><strong c>Paper 3: Character Enhanment for improving classification task (IEPalmV2)</strong></p>
+ <h3> <strong>New update coming soon</strong>
+        
+
+    </div>
+
+
+<p class="section">BibTeX (Citation)</p>
+<pre class="selectable"><code>
+@article{thuon2024generate,
+  title={Generate, transform, and clean: the role of GANs and transformers in palm leaf manuscript generation and enhancement},
+  author={Thuon, Nimol and Du, Jun and Zhang, Zhenrong and Ma, Jiefeng and Hu, Pengfei},
+  journal={International Journal on Document Analysis and Recognition (IJDAR)},
+  pages={1--18},
+  year={2024},
+  publisher={Springer}
+}
+@inproceedings{thuon2022improving,
+  title={Improving isolated glyph classification task for palm leaf manuscripts},
+  author={Thuon, Nimol and Du, Jun and Zhang, Jianshu},
+  booktitle={International Conference on Frontiers in Handwriting Recognition},
+  pages={65--79},
+  year={2022},
+  organization={Springer}
+}
+</code></pre>
+    
+</div>
+</body>
+</html>
